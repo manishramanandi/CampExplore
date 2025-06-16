@@ -4,12 +4,8 @@ const path = require('path');
 const mongoose = require('mongoose');
 const campground = require('./models/campground')
 
-
-mongoose.connect('mongodb://localhost:27017/camp-explore',{
-    // useNewUrlParser: true,
-
-    // UseUnifiedTopology: true,
-});
+// local database 
+mongoose.connect('mongodb://localhost:27017/camp-explore');
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
